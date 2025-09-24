@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Red-Hat-Display";
+  src: url(./assets/red-hat-display_5.2.7_latin-300-normal.ttf);
+}
+
+@font-face {
+  font-family: "bold-mango";
+  src: url(./assets/7d084e7a659bd79d-s.p.ttf);
+}
+
+@font-face {
+  font-family: "light-mango";
+  src: url(./assets/gNMEW3NwSYq_9WD3yHQiFQ.woff2);
+}
+
+@font-face {
+  font-family: "geist-mono";
+  src: url(./assets/Geist-Regular.woff2);
+}
+
+:root {
+  --senary-color: #4d4d66;
+  --text-color: #ffffff;
+  --background-color: #131313;
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Red-Hat-Display", sans-serif;
+  --font-family-tertiary: "bold-mango", sans-serif;
+  --font-family-mango: "light-mango", sans-serif;
+  --font-family-mono: "geist-mono", monospace;
+  --mobile-horizontal-padding: 5%;
+  --default-horizontal-padding: 7.5%;
+  --minWidth2000-horizontal-padding: 15%;
+  --minWidth2500-horizontal-padding: 25%;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main {
+  position: relative;
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 110;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
+  left: -3%;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/* header section start here */
+
+#main #header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 1.7rem 3rem;
+}
+
+#header h2 {
+  font-family: light-mango;
+  font-size: 2rem;
+  font-weight: 400;
+  position: sticky;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 200;
+  font-family: var(--font-family-mango);
+}
+
+#navbar ul li a:hover {
+  color: #ff4c60;
+  transition: all 0.3s ease;
+}
+
+/* header section end here */
+
+
+.hero {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.8rem;
+  position: relative;
+  padding: 2rem 4rem;
+  gap: 2rem;
+}
+
+.hero-title-wrapper{
+  width: 100%;
+  height: auto;
+
+}
+
+.hero-content {
+  width: 100%;
+  height: auto;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4rem;
+  gap: 0.6rem;
+}
+
+.hero-sub {
+  font-family: var(--font-family-display);
+  font-size: 1.2rem;
+  color: var(--senary-color);
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  font-family: var(--font-family-mango);
+  font-size: 12rem;
+  line-height: 0.95;
+  color: #f1f1f1;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding-bottom: 0.8rem;
+}
+
+.title-designer{
+  text-align: end;
+}
+
+/* hero section end here */
+
+
+
+
+
+/* responsive css start here */
+
+@media (max-width: 1230px) {
+  .hero-title {
+    font-size: clamp(4.5rem, 5.5rem + 4vw, 12rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: clamp(4rem, 5rem + 4vw, 13rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  #navbar ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(3.5rem, 4.5rem + 4vw, 10rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  #navbar ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-title {
+    font-size: clamp(3rem, 4rem + 4vw, 7rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  #navbar ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 3.5rem + 4vw, 10rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  #navbar ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* mobile view */
+
+@media (max-width: 480px) {
+  #header {
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+
+  #nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 120;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger::before {
+    transform: translateY(-8px);
+  }
+
+  .hamburger::after {
+    transform: translateY(8px);
+  }
+
+  #nav-toggle[aria-expanded="true"] .hamburger {
+    background-color: transparent;
+  }
+
+  #nav-toggle[aria-expanded="true"] .hamburger::before {
+    transform: rotate(45deg);
+  }
+
+  #nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: rotate(-45deg);
+  }
+
+  #navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--background-color);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar[aria-expanded="true"] {
+    max-height: 300px;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #navbar ul li a {
+    font-size: 1.2rem;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .hero {
+    padding: 2rem var(--mobile-horizontal-padding);
+    font-size: 1.4rem;
+    height: auto;
+  }
+  .hero-title {
+    font-size: 6rem;
+  }
+
+}
+/* responsive css end here */
