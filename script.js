@@ -26,16 +26,55 @@ function firstPageAnim() {
       duration: 1.5,
       delay: -1,
       stagger: 0.3,
-      ease: Expo.easeOut,
     });
 }
 
-firstPageAnim()
+function setupScrollReveal() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#home',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 0.6,
+      pin: true,
+    },
+  });
+
+  tl.fromTo(
+    '.profile-img',
+    { left: '-22%' },
+    { left: '0%', ease: 'power2.out' },
+    0
+  );
+
+  tl.fromTo(
+    '.title-designer',
+    { xPercent: 0 },
+    { xPercent: -5, ease: 'power2.out' },
+    0
+  );
+
+  tl.fromTo(
+    '.title-devloper',
+    { xPercent: 0 },
+    { xPercent: 2, ease: 'power2.out' },
+    0
+  );
+}
+// firstPageAnim()
 
 gsap.registerPlugin(ScrollTrigger);
 
+document.addEventListener("DOMContentLoaded", function() {
+  firstPageAnim();
+  setupScrollReveal();
+  AboutPageAnimation();
+});
 
 const lenis = new Lenis();
+
+
+
 
 function raf(time) {
   lenis.raf(time);
@@ -62,53 +101,29 @@ function AboutPageAnimation() {
 
 }
 
-AboutPageAnimation()
-
-
 function projectsPageAnimation() {
-
   document.addEventListener("DOMContentLoaded", () => {
     const lenis = new Lenis();
 
-    lenis.on("scroll", ScrollTrigger.update)
+    lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
-    })
-    gsap.ticker.lagSmoothing(0)
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
 
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
 
     const cards = document.querySelectorAll(".card");
-    const stickySection = window.innerHeight * 5
-
+    const stickySection = window.innerHeight * 5;
 
     const transforms = [
-      [
-        [10, 50, -10, 10],
-        [20, -10, -45, 20]
-      ],
-      [
-        [0, 47.5, -10, 15],
-        [-25, 15, -45, 30]
-      ],
-      [
-        [0, 52.5, -10, 5],
-        [-15, -5, -40, 60]
-      ],
-      [
-        [0, 50, 30, 80],
-        [20, -10, 60, 5]
-      ],
-      [
-        [10, 55, -15, 30],
-        [25, -15, 60, 95]
-      ],
-      [
-        [0, 50, 30, 80],
-        [20, -10, 60, 5]
-      ]
-    ]
-
+      [[10, 50, -10, 10], [20, -10, -45, 20]],
+      [[0, 47.5, -10, 15], [-25, 15, -45, 30]],
+      [[0, 52.5, -10, 5], [-15, -5, -40, 60]],
+      [[0, 50, 30, 80], [20, -10, 60, 5]],
+      [[10, 55, -15, 30], [25, -15, 60, 95]],
+      [[0, 50, 30, 80], [20, -10, 60, 5]],
+    ];
 
     ScrollTrigger.create({
       trigger: ".projects-section",
@@ -118,12 +133,15 @@ function projectsPageAnimation() {
       pinSpacing: true,
       scrub: true,
       onUpdate: (self) => {
-        const progress = self.progress
+        const progress = self.progress;
 
+        // Animate each card
         cards.forEach((card, index) => {
           const delay = index * 0.11258;
-
-          const cardProgress = Math.max(0, Math.min((progress - delay) * 2, 1));
+          const cardProgress = Math.max(
+            0,
+            Math.min((progress - delay) * 2, 1)
+          );
 
           if (cardProgress > 0) {
             const cardStartX = 25;
@@ -131,53 +149,68 @@ function projectsPageAnimation() {
             const yPos = transforms[index][0];
             const rotations = transforms[index][1];
 
-            const cardX = gsap.utils.interpolate(cardStartX, cardEndX, cardProgress);
+            const cardX = gsap.utils.interpolate(
+              cardStartX,
+              cardEndX,
+              cardProgress
+            );
 
-            const yProgress = cardProgress * 3
-            const yIndex = Math.min(Math.floor(yProgress), yPos.length - 2);
-            const yInterpolation = yProgress - yIndex
+            const yProgress = cardProgress * 3;
+            const yIndex = Math.min(
+              Math.floor(yProgress),
+              yPos.length - 2
+            );
+            const yInterpolation = yProgress - yIndex;
 
             const cardY = gsap.utils.interpolate(
               yPos[yIndex],
               yPos[yIndex + 1],
               yInterpolation
-            )
+            );
 
             const cardRotation = gsap.utils.interpolate(
               rotations[yIndex],
               rotations[yIndex + 1],
               yInterpolation
-            )
+            );
 
             gsap.set(card, {
               xPercent: cardX,
               yPercent: cardY,
               rotation: cardRotation,
-              opacity: 1
-            })
+              opacity: 1,
+            });
           } else {
-            gsap.set(card, { opacity: 0 })
+            gsap.set(card, { opacity: 0 });
           }
-        })
+        });
 
-        // Animate the projects-section heading only after most cards have moved out
+        // Animate heading AFTER all cards
         const heading = document.querySelector(".projects-section h1");
         if (heading) {
-          // Start heading animation when main progress passes this threshold
-          const headingThreshold = 0.9; // tweak between 0-1
-          const headingProgress = Math.max(0, Math.min((progress - headingThreshold) / (1 - headingThreshold), 1));
-
-          const headingY = gsap.utils.interpolate(0, -20, headingProgress);
-          const headingOpacity = gsap.utils.interpolate(1, 0, headingProgress);
-
-          gsap.set(heading, { yPercent: headingY, opacity: headingOpacity });
+          // Trigger when 80% of animation done
+          const headingThreshold = 0.8;
+          if (progress > headingThreshold) {
+            const headingProgress = gsap.utils.mapRange(
+              headingThreshold,
+              1,
+              0,
+              1,
+              progress
+            );
+            gsap.set(heading, {
+              yPercent: gsap.utils.interpolate(0, -20, headingProgress),
+              opacity: gsap.utils.interpolate(1, 0, headingProgress),
+            });
+          }
         }
-      }
-    })
-  })
+      },
+    });
+  });
 }
 
 projectsPageAnimation()
+
 // services page animation
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -191,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger)
 
   gsap.to(".services__content", {
-  xPercent: -100, // poore content ko left shift karo
+  xPercent: -64, // poore content ko left shift karo
   ease: "none",
   scrollTrigger: {
     trigger: ".services-section",
@@ -204,6 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 })
 
+
+// Get In Touch form validation
 
 // Floating label support for contact inputs/textarea
 ;(function () {
@@ -238,6 +273,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 })();
-
-
-
