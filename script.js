@@ -61,6 +61,23 @@ function setupScrollReveal() {
     0
   );
 }
+// function scrollImageAnim() {
+//   var tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".second-section",
+//       start: "0% 95%",
+//       end: "50% 50%",
+//       scrub: true,
+//       // markers: true
+//     },
+//   });
+
+// tl.to(".profile-img",{
+//   y: "155%",
+//   x: "30%",
+//   zIndex: 9999,
+// });
+// }
 // firstPageAnim()
 
 gsap.registerPlugin(ScrollTrigger);
@@ -69,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
   firstPageAnim();
   setupScrollReveal();
   AboutPageAnimation();
+  scrollImageAnim();
 });
 
 const lenis = new Lenis();
@@ -95,8 +113,8 @@ function AboutPageAnimation() {
       scrub: true,
       // pin: true
     },
-    opacity: 0.2,
-    stagger: 0.1
+    stagger: 0.1,
+    color:"#222020",
   });
 
 }
@@ -241,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Get In Touch form validation
 
 // Floating label support for contact inputs/textarea
-;(function () {
+(function () {
   function updateFilled(el) {
     if (!el) return;
     if (el.value && el.value.trim() !== "") {

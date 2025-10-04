@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');* {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,6 +30,11 @@ body {
 @font-face {
   font-family: "geist-mono";
   src: url(./assets/Geist-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Inter-Display";
+  src: url(./assets/dHHUz45rhM2KCQpj9zttNVlibk.woff2);
 }
 
 :root {
@@ -213,31 +220,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 4rem;
-}
-
-.second-section .image-box {
-  width: 40%;
-  height: auto;
+  padding: 0 2rem;
 }
 
 #about-me {
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 #about-me p {
-  line-height: 1;
-  color: #ddd;
+  font-size: 50px;
+  /* font-style: normal; */
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  /* display: inline-block; */
+  /* white-space: pre-wrap; */
+  /* overflow: visible; */
 }
 
-#about-me .char {
-   font-family: "Raleway", sans-serif;
-   font-weight: 500;
-     font-size: 2rem;
+.btn-primary {
+  padding: 20px 40px;
+  font-size: 18px;
+  border: 1px solid #131313;
+  border-radius: 56px;
+  color: #aaa;
+}
+
+.btn-secondary {
+  padding: 20px 40px;
+  font-size: 18px;
+  border: 1px solid #131313;
+  border-radius: 56px;
+  color: #aaa;
 }
 
 /* About section end here */
@@ -267,14 +286,16 @@ body {
 
 .projects-section h1 {
   font-size: clamp(8rem, 9rem + 4vw, 12rem);
-  color: #fff;
+  color: #aaa;
   font-weight: lighter;
   letter-spacing: -10px;
   margin-bottom: 50px;
   /*color: #000;
-  */position: absolute;
+  */
+  position: absolute;
   /*left: 50%;
-  */bottom: -15%;
+  */
+  bottom: -15%;
   z-index: 1;
   font-family: geist-mono;
 }
@@ -592,6 +613,8 @@ body {
   line-height: 1.4;
   text-align: justify;
   color: #ddd;
+  z-index: 50;
+  /* keep on top */
 }
 
 .box-2 {
@@ -599,6 +622,16 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+}
+
+
+/* when ScrollTrigger pins the profile container, ensure it stays positioned and above headings */
+.profile-img.is-pinned {
+  position: fixed !important;
+  top: 50% !important;
+  left: 10% !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
 }
 
 .box-2 h2 {
@@ -836,7 +869,7 @@ body {
 
 .alt-contact a {
   color: #fff;
-  text-decoration: dashed;
+  text-decoration: underline !important;
   font-weight: 500;
 }
 
@@ -914,7 +947,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   max-width: 980px;
-  
+
 }
 
 .contacts-form-container {
@@ -1018,8 +1051,8 @@ body {
   transition: width 0.28s ease;
 }
 
-.contact-input:focus + label + .focus-border,
-.contact-input:focus + .focus-border {
+.contact-input:focus+label+.focus-border,
+.contact-input:focus+.focus-border {
   width: 100%;
 }
 
@@ -1070,8 +1103,8 @@ body {
   font-family: var(--font-family-mango);
 }
 
-.controls .contact-input:focus + label,
-.controls .contact-input.filled + label {
+.controls .contact-input:focus+label,
+.controls .contact-input.filled+label {
   transform: translateY(-1.6rem) scale(var(--label-scale));
   color: rgba(255, 255, 255, 0.9);
 }
@@ -1290,8 +1323,10 @@ body {
     font-size: 1.4rem;
     height: auto;
   }
+
   .hero-title {
     font-size: 6rem;
   }
 }
+
 /* responsive css end here */
