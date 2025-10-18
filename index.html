@@ -27,10 +27,10 @@
         <!-- <h2 class="logo">Raj</h2> -->
         <nav id="navbar">
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">WORK</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </header>
@@ -51,123 +51,170 @@
     </div>
 
     <div class="second-section">
-      <!-- <div class="image-box"></div> -->
-      <div class="px-[5rem]" id="about-me">
-        <p class="reveal-text">
-          Hii I'm Raj, a <span class="text-[#F05038]">Full Stack Developer</span> and <span class="text-[#F05038]">Designer</span><br> I create modern and responsive websites that provide an optimal user experience across all devices. <span class="text-[#F05038]">I am passionate about building efficient and scalable web applications</span> that meet the needs of clients and users alike. <span class="text-[#F05038]">Contact Me</span> for freelance work <span class="text-[#F05038]">anytime.</span>
+      <div class="about-container" id="about">
+        <h2 class="section-tag">// About Me</h2>
+        <p class="intro-text reveal-text">
+          I'm a versatile <span class="highlight">Full Stack Developer</span> and
+          <span class="highlight">Designer</span> who turns ideas into
+          <span class="highlight">real digital experiences.</span>
+          <br>
+          I focus on <span class="highlight">clean interfaces</span>,
+          <span class="highlight">smooth animations</span>, and
+          <span class="highlight">fast performance</span> to deliver impactful web solutions.
         </p>
+
         <div class="btn-container mt-16 w-full flex gap-5 justify-center">
-          <a href="#" class="btn-primary">Download CV</a>
+          <a href="assets/Raj_Resume.docx" download class="btn-primary">Download CV</a>
           <a href="#work" class="btn-secondary">See My Work</a>
         </div>
       </div>
     </div>
 
-    <section class="projects-section">
+
+    <section class="projects-section" id="work" aria-labelledby="projects">
 
       <h1>PROJECTS</h1>
       <div class="projects-wrapper" role="list" aria-label="Creative project gallery">
 
         <div class="card" role="listitem" tabindex="0" aria-describedby="desc1">
           <div class="card-img">
-            <img src="https://placehold.co/280x380?text=AI+Generated+Art+Gallery"
+            <img src="./assets/cynthai ugnu.png"
               alt="Minimalist art gallery displayed on digital screens with futuristic black background and subtle lighting, showcasing AI generated artworks"
               onerror="this.style.display='none';" />
           </div>
           <div class="card-content">
             <div class="card-title">
-              <h2 class="project-title">GENERATED ART GALLERY</h3>
+              <h2 class="project-title">Cynthia Ugwu Inspired Portfolio</h3>
             </div>
             <div class="card-description">
               <p class="project-desc" id="desc1">
-                MINIMALIST GALLERY EXPLORING AI-GENERATED ART AND IMAGERY THROUGH CLEAN LAYOUT AND SUBTLE, DISTORTED
-                INTERACTIONS.
+                A clean and modern portfolio website designed for a product designer. It focuses on bold typography,
+                minimal layout, and an immersive black-and-white theme to emphasize clarity and creativity.
               </p>
-              <span class="project-link">View Project</span>
+              <div class="links">
+                <a target="_blank" href="https://github.com/RajkrRabidas/web_project_Cynthia-Ugwu" class="project-link"><i class="ri-github-fill"></i> GitHub</a>
+                <a target="_blank" href="https://rajkrrabidas.github.io/web_project_Cynthia-Ugwu/" class="project-link"><i class="ri-arrow-right-up-line"></i> View Project</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="card" role="listitem" tabindex="0" aria-describedby="desc1">
           <div class="card-img">
-            <img src="https://placehold.co/280x380?text=AI+Generated+Art+Gallery"
+            <img src="./assets/Errik-mockup.png"
               alt="Minimalist art gallery displayed on digital screens with futuristic black background and subtle lighting, showcasing AI generated artworks"
               onerror="this.style.display='none';" />
           </div>
           <div class="card-content">
             <div class="card-title">
-              <h2 class="project-title">GENERATED ART GALLERY</h3>
+              <h2 class="project-title">Erikk </h3>
             </div>
             <div class="card-description">
               <p class="project-desc" id="desc1">
-                MINIMALIST GALLERY EXPLORING AI-GENERATED ART AND IMAGERY THROUGH CLEAN LAYOUT AND SUBTLE, DISTORTED
-                INTERACTIONS.
+                A sleek and modern e-commerce website designed for a fashion brand. It features a minimalist layout,
+                bold typography, and a monochrome color scheme to highlight the products and enhance the shopping
+                experience. clone of erikk.com read more...
               </p>
-              <span class="project-link">View Project</span>
+              <div class="links">
+                <a href="https://github.com/yourusername/erikk" class="project-link"><i class="ri-github-fill"></i> GitHub</a>
+                <a href="https://yourusername.github.io/erikk/" class="project-link"><i class="ri-arrow-right-up-line"></i> View Project</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="card" role="listitem" tabindex="0" aria-describedby="desc1">
           <div class="card-img">
-            <img src="https://placehold.co/280x380?text=AI+Generated+Art+Gallery"
+            <img src="./assets/react frontend peoject.png"
               alt="Minimalist art gallery displayed on digital screens with futuristic black background and subtle lighting, showcasing AI generated artworks"
               onerror="this.style.display='none';" />
           </div>
           <div class="card-content">
             <div class="card-title">
-              <h2 class="project-title">GENERATED ART GALLERY</h3>
+              <h2 class="project-title">NFT Marketplace landing page</h2>
             </div>
             <div class="card-description">
               <p class="project-desc" id="desc1">
-                MINIMALIST GALLERY EXPLORING AI-GENERATED ART AND IMAGERY THROUGH CLEAN LAYOUT AND SUBTLE, DISTORTED
-                INTERACTIONS.
+                A modern and responsive React-based website showcasing a collection of AI-generated art. It features a
+                clean layout, smooth animations, and an interactive gallery to enhance the user experience. clone of
+                pintreest NFTs Marektplace Website Landing page UI UX Design - Dezyn Ista. 
               </p>
-              <span class="project-link">View Project</span>
+              <div class="links">
+                <a target="_blank" href="https://github.com/RajkrRabidas/nft-landing-page" class="project-link"><i class="ri-github-fill"></i> GitHub</a>
+                <a target="_blank" href="https://cryptovibe-ui.netlify.app/" class="project-link"><i class="ri-arrow-right-up-line"></i> View Project</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="card" role="listitem" tabindex="0" aria-describedby="desc1">
           <div class="card-img">
-            <img src="https://placehold.co/280x380?text=AI+Generated+Art+Gallery"
+            <img src="https://t3.ftcdn.net/jpg/14/57/44/40/240_F_1457444058_L5KtWI6YybfqIECR9AYRlZlk3VeKtFLo.jpg"
               alt="Minimalist art gallery displayed on digital screens with futuristic black background and subtle lighting, showcasing AI generated artworks"
               onerror="this.style.display='none';" />
           </div>
           <div class="card-content">
             <div class="card-title">
-              <h2 class="project-title">GENERATED ART GALLERY</h3>
+              <h2 class="project-title">Gemini-Powered Chatbot</h2>
             </div>
             <div class="card-description">
               <p class="project-desc" id="desc1">
-                MINIMALIST GALLERY EXPLORING AI-GENERATED ART AND IMAGERY THROUGH CLEAN LAYOUT AND SUBTLE, DISTORTED
-                INTERACTIONS.
+                this chatbot is create gemini ai model and this is a simple chatbot using express js and mongodb, node js
+                and react js for frontend and I Implemented Short Term Memory (STM) to enhance user experience by
+                retaining context within a session.
               </p>
-              <span class="project-link">View Project</span>
+              <div class="links">
+                <a href="https://github.com/yourusername/gemini-powered-chatbot" class="project-link"><i class="ri-github-fill"></i> GitHub</a>
+                <a href="https://yourusername.github.io/gemini-powered-chatbot/" class="project-link"><i class="ri-arrow-right-up-line"></i> View Project</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="card" role="listitem" tabindex="0" aria-describedby="desc1">
           <div class="card-img">
-            <img src="https://placehold.co/280x380?text=AI+Generated+Art+Gallery"
+            <img src="./assets/chat GPT mokeup.png"
               alt="Minimalist art gallery displayed on digital screens with futuristic black background and subtle lighting, showcasing AI generated artworks"
               onerror="this.style.display='none';" />
           </div>
           <div class="card-content">
             <div class="card-title">
-              <h2 class="project-title">GENERATED ART GALLERY</h3>
+              <h2 class="project-title">Chat GPT Clone </h2>
             </div>
             <div class="card-description">
               <p class="project-desc" id="desc1">
-                MINIMALIST GALLERY EXPLORING AI-GENERATED ART AND IMAGERY THROUGH CLEAN LAYOUT AND SUBTLE, DISTORTED
-                INTERACTIONS.
+                A sleek and modern ChatGPT clone website designed to provide an intuitive and engaging user experience.
+                It features a clean layout, smooth animations, and a responsive design to ensure accessibility across
+                devices. The website is built using React and integrates the Gemini Model flash 2.5 API and use RAG for long-term memory, 
               </p>
-              <span class="project-link">View Project</span>
+              <div class="links">
+                <a target="_blank" href="https://github.com/RajkrRabidas/chat-GPT-project" class="project-link"><i class="ri-github-fill"></i> GitHub</a>
+                <a target="_blank" href="https://rajkrrabidas.github.io/chat-GPT-project/" class="project-link"><i class="ri-arrow-right-up-line"></i> View Project</a>
+              </div>
             </div>
           </div>
         </div>
 
+        <div class="card" role="listitem" tabindex="0" aria-describedby="desc1">
+          <div class="card-img">
+            <img src="https://placehold.co/280x380?text=coming+soon"
+              alt="Minimalist art gallery displayed on digital screens with futuristic black background and subtle lighting, showcasing AI generated artworks"
+              onerror="this.style.display='none';" />
+          </div>
+          <div class="card-content">
+            <div class="card-title">
+              <h2 class="project-title">Micro Services - Ecommerce Website</h2>
+            </div>
+            <div class="card-description">
+              <p class="project-desc" id="desc1">
+              </p>
+              <div class="links">
+                <a target="_blank" href="https://github.com/RajkrRabidas/chat-GPT-project" class="project-link"><i class="ri-github-fill"></i> GitHub</a>
+                <a target="_blank" href="https://rajkrrabidas.github.io/chat-GPT-project/" class="project-link"><i class="ri-arrow-right-up-line"></i> View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -176,7 +223,8 @@
       <h2 class="services__header">Services</h2>
     </div> -->
 
-    <section class="services-section">
+    <section class="services-section" id="services">
+      <h2 class="section-tag2">// Services</h2>
       <div class="pin-spacer">
         <div class="services__content">
           <div class="services__content-left">
@@ -245,21 +293,21 @@
     </section>
 
     <!-- Get In Touch Contact Section -->
-    <section aria-labelledby="get-in-touch" class="contact-section">
+    <section aria-labelledby="get-in-touch" class="contact-section" id="contact">
       <div class="contact-wrap">
         <header class="contact-head">
           <h1 id="get-in-touch" class="contact-title">GET IN TOUCH</h1>
           <span class="contact-sticker">Want to know more?</span>
         </header>
 
-        <form name="sentMessage" id="contactForm" novalidate="" class="contacts-form" action="#">
+        <form name="sentMessage" id="contactForm" novalidate="" class="contacts-form" action="https://getform.io/f/bejedzea" method="POST">
           <div class="contacts-content-container">
             <div class="contacts-form-container">
               <div class="contacts-form-row">
                 <div class="input-container">
                   <div class="control-group form-group">
                     <div class="controls">
-                      <input id="name" class="contact-input" type="text" required=""
+                      <input id="name" class="contact-input" type="text" required="" name="name"
                         data-validation-required-message="Please enter your name.">
                       <label>Name</label>
                       <span class="focus-border"></span>
@@ -269,7 +317,7 @@
                 <div class="input-container">
                   <div class="control-group form-group">
                     <div class="controls">
-                      <input id="company" class="contact-input" type="text" placeholder="">
+                      <input id="company" class="contact-input" type="text" placeholder="" name="company">
                       <label>Company</label>
                       <span class="focus-border"></span>
                     </div>
@@ -281,7 +329,7 @@
                 <div class="input-container">
                   <div class="control-group form-group">
                     <div class="controls">
-                      <input id="email" class="contact-input" type="email" required=""
+                      <input id="email" name="email" class="contact-input" type="email" required=""
                         data-validation-required-message="Please enter your email address.">
                       <label>E-mail</label>
                       <span class="focus-border"></span>
@@ -291,7 +339,7 @@
                 <div class="input-container">
                   <div class="control-group form-group">
                     <div class="controls">
-                      <input id="phone" class="contact-input" type="tel">
+                      <input id="phone" name="phone" class="contact-input" type="tel">
                       <label>Phone</label>
                       <span class="focus-border"></span>
                     </div>
@@ -303,7 +351,7 @@
                 <div class="input-container">
                   <div class="control-group form-group">
                     <div class="controls">
-                      <textarea id="message" rows="1" class="contact-input" type="text" required=""
+                      <textarea id="message" name="message" rows="1" class="contact-input" type="text" required=""
                         data-validation-required-message="Please enter your message"></textarea>
                       <label>Message</label>
                       <span class="focus-border"></span>
@@ -345,17 +393,17 @@
           <div class="footer-right">
             <div class="alt-contact">Hate contact forms?<a class="text-decoration-underline"
                 href="mailto:das752101@gmail.com"><span> Me too <i
-                    class="ri-arrow-right-line"></i></span>rajsad@gmail.com</a>
+                    class="ri-arrow-right-line"></i></span>raj@gmail.com</a>
             </div>
             <div class="follow">FOLLOW</div>
             <div class="socials">
-              <a href="#" aria-label="Instagram" class="social">IG</a>
-              <a href="#" aria-label="Behance" class="social">Bē</a>
-              <a href="#" aria-label="LinkedIn" class="social">in</a>
-              <a href="#" aria-label="Pinterest" class="social">P</a>
-              <a href="mailto:info@rafaelaabreu.com" aria-label="Email" class="social">✉</a>
+              <a target="_blank" href="https://www.instagram.com/raj_webdev/?igsh=MXZ6Nmt0aHNlZzM1dA%3D%3D#" aria-label="Instagram" class="social"><i class="ri-instagram-line"></i></a>
+              <a target="_blank" href="#" aria-label="Behance" class="social"><i class="ri-twitter-x-line"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/raj-kumar-rabidas-1a1428293/"  aria-label="LinkedIn" class="social"><i class="ri-linkedin-box-fill"></i></a>
+              <a target="_blank" href="https://leetcode.com/u/raj_webdev/" aria-label="LeetCode" class="social"><i class="ri-code-s-slash-line"></i></a>
+              <a target="_blank" href="mailto:das752101@gmail.com" aria-label="Email" class="social"><i class="ri-mail-line"></i></a>
             </div>
-            <div class="fine-print">all rights reserved <br> created by R.k Rabidas in 2025</div>
+            <div class="fine-print">All rights reserved <br> created by R.k Rabidas in 2025</div>
           </div>
         </footer>
       </div>

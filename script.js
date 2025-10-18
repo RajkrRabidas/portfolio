@@ -135,11 +135,11 @@ function projectsPageAnimation() {
     const stickySection = window.innerHeight * 5;
 
     const transforms = [
-      [[10, 50, -10, 10], [20, -10, -45, 20]],
+      [[10, 40, -10, 10], [20, -10, -45, 20]],
       [[0, 47.5, -10, 15], [-25, 15, -45, 30]],
-      [[0, 52.5, -10, 5], [-15, -5, -40, 60]],
-      [[0, 50, 30, 80], [20, -10, 60, 5]],
-      [[10, 55, -15, 30], [25, -15, 60, 95]],
+      [[0, 29.5, -10, 5], [-15, -5, -40, 60]],
+      [[0, 40, -5, 80], [20, -10, 60, 5]],
+      [[10, 35, -15, 30], [25, -15, 60, 95]],
       [[0, 50, 30, 80], [20, -10, 60, 5]],
     ];
 
@@ -289,5 +289,32 @@ document.addEventListener("DOMContentLoaded", () => {
         updateFilled(input);
       });
     });
+
+    // Clear inputs after form submission
+    const contactForm = document.querySelector('.contacts-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        // Allow normal submit to proceed; if you use AJAX, preventDefault here
+        // e.preventDefault();
+
+        // Clear each input/textarea and reset visual classes
+        const nameInput = contactForm.querySelector('#name');
+        const companyInput = contactForm.querySelector('#company');
+        const emailInput = contactForm.querySelector('#email');
+        const phoneInput = contactForm.querySelector('#phone');
+        const messageInput = contactForm.querySelector('#message');
+
+        [nameInput, companyInput, emailInput, phoneInput, messageInput].forEach((input) => {
+          if (input) {
+            input.value === '' ? null : input.value = '';
+          }
+        });
+
+        // If there's any success message or reset focus, handle it here
+        // Example: focus first input after submit
+        const first = contactForm.querySelector('.contact-input');
+        if (first) first.focus();
+      });
+    }
   });
 })();
