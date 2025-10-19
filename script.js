@@ -3,6 +3,36 @@
 //   header.classList.toggle("sticky", window.scrollY > 0);
 // });
 
+function textReveal(){
+
+let elements = document.querySelectorAll(".text");
+
+elements.forEach((element) => {
+  let innerText = element.innerText;
+  element.innerHTML = "";
+
+  let textContent = document.createElement("div");
+  textContent.classList.add("block");
+
+  for(let letter of  innerText){
+    let span = document.createElement("span");
+    span.innerText = letter.trim() === "" ? "\xa0" : letter;
+    span.classList.add("letter");
+    textContent.appendChild(span);
+  }
+
+  element.appendChild(textContent);
+  element.appendChild(textContent.cloneNode(true));
+});
+
+elements.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.classList.remove("play");
+  });
+});
+}
+textReveal()
+
 function firstPageAnim() {
   var tl = gsap.timeline();
 
@@ -61,24 +91,6 @@ function setupScrollReveal() {
     0
   );
 }
-// function scrollImageAnim() {
-//   var tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".second-section",
-//       start: "0% 95%",
-//       end: "50% 50%",
-//       scrub: true,
-//       // markers: true
-//     },
-//   });
-
-// tl.to(".profile-img",{
-//   y: "155%",
-//   x: "30%",
-//   zIndex: 9999,
-// });
-// }
-// firstPageAnim()
 
 gsap.registerPlugin(ScrollTrigger);
 

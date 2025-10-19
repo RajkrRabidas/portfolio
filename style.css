@@ -137,18 +137,59 @@ body {
   list-style: none;
 }
 
-#navbar ul li a {
+#navbar ul li .text {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 200;
   font-family: var(--font-family-mango);
+  height: 1.4rem;
+  overflow: hidden;
 }
 
-#navbar ul li a:hover {
-  color: #ff4c60;
-  transition: all 0.3s ease;
+.text:hover .letter,
+.text.play .letter{
+  transform: translateY(-100%);
 }
+.text.block:last-child{
+  color:#08645B;
+}
+
+.text .letter {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76,0,0.024, 1);
+}
+
+.letter:nth-child(1) {
+  transition-delay: 0s;
+}
+.letter:nth-child(2) {
+  transition-delay: 0.03s;
+}
+.letter:nth-child(3) {
+  transition-delay: 0.06s;
+}
+.letter:nth-child(4) {
+  transition-delay: 0.09s;
+}
+
+.letter:nth-child(5) {
+  transition-delay: 0.12s;
+}
+.letter:nth-child(6) {
+  transition-delay: 0.15s;
+}
+
+.letter:nth-child(7) {
+  transition-delay: 0.18s;
+}
+
+.letter:nth-child(8) {
+  transition-delay: 0.21s;
+}
+
+
 
 /* header section end here */
 
@@ -263,6 +304,7 @@ body {
 .btn-container {
   margin-top: 3rem;
 }
+
 
 .btn-primary,
 .btn-secondary {
@@ -458,7 +500,6 @@ body {
   font-size: 1rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 2rem;
   font-weight: 600;
   font-family: var(--font-family-mango);
   user-select: none;
