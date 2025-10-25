@@ -201,7 +201,7 @@ body {
 
 .hero {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1331,7 +1331,8 @@ body {
   .second-section {
     flex-direction: column;
     gap: 3rem;
-    margin-top: 5rem;
+    /* margin-bottom: 5rem; */
+    padding: 8rem 2rem 2rem 2rem;
   }
 
   .projects-section h1 {
@@ -1374,41 +1375,8 @@ body {
   }
 
   .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    position: relative;
+    font-size: 2rem;
     transition: all 0.3s ease-in-out;
-  }
-
-  .hamburger::before,
-  .hamburger::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .hamburger::before {
-    transform: translateY(-8px);
-  }
-
-  .hamburger::after {
-    transform: translateY(8px);
-  }
-
-  #nav-toggle[aria-expanded="true"] .hamburger {
-    background-color: transparent;
-  }
-
-  #nav-toggle[aria-expanded="true"] .hamburger::before {
-    transform: rotate(45deg);
-  }
-
-  #nav-toggle[aria-expanded="true"] .hamburger::after {
-    transform: rotate(-45deg);
   }
 
   #navbar {
@@ -1461,7 +1429,7 @@ body {
   }
 
   .projects-section h1 {
-    bottom: 10%;
+    bottom: 5%;
   }
   .contacts-info{
     display: none;

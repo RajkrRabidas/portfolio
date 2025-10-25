@@ -351,3 +351,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 })();
+
+const menuIcon = document.getElementById('hamburger');
+
+menuIcon.addEventListener('click', () => {
+  const nav = document.getElementById('navbar');
+  const isExpanded = nav.getAttribute('aria-expanded') === 'true';
+  nav.setAttribute('aria-expanded', !isExpanded);
+});

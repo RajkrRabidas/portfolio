@@ -25,7 +25,11 @@
     <div id="home">
       <header id="header">
         <!-- <h2 class="logo">Raj</h2> -->
-        <nav id="navbar">
+        <!-- Mobile nav toggle (styles expect #nav-toggle and .hamburger) -->
+        <button id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger"><i class="ri-menu-line"></i></span>
+        </button>
+        <nav id="navbar" aria-expanded="false">
           <ul>
             <li><a class="text" href="#home">HOME</a></li>
             <li><a class="text" href="#work">WORK</a></li>
