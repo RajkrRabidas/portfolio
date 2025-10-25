@@ -72,7 +72,7 @@ function setupScrollReveal() {
 
   tl.fromTo(
     '.profile-img',
-    { left: '-22%' },
+    { left: '-70%' },
     { left: '0%', ease: 'power2.out' },
     0
   );
@@ -253,18 +253,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  gsap.to(".services__content", {
-  xPercent: -64, // poore content ko left shift karo
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".services-section",
-    pin: true,
-    scrub: 1,
-    start: "top top",
-    end: "+=2000",
-    // markers: true
-  }
-});
+  ScrollTrigger.matchMedia({
+    // mobile and small tablets
+    "(max-width: 767px)": function() {
+      gsap.to(".services__content", {
+        xPercent: -90, // mobile: shift to 90%
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".services-section",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: "+=2000", 
+          // markers: true
+        }
+      });
+    },
+
+    // desktop and larger
+    "(min-width: 768px)": function() {
+      gsap.to(".services__content", {
+        xPercent: -64, // desktop: shift to 64%
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".services-section",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: "+=2000",
+          // markers: true
+        }
+      });
+    }
+  });
 })
 
 
