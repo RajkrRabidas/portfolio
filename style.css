@@ -199,6 +199,10 @@ body {
 
 /* header section end here */
 
+#nav-toggle{
+  display: none;
+}
+
 .hero {
   width: 100%;
   height: 90%;
@@ -309,6 +313,14 @@ body {
 
 .btn-container {
   margin-top: 3rem;
+}
+
+.btn-container {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
 }
 
 
@@ -990,7 +1002,7 @@ body {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: "Red Hat Display";
+  font-family: var(--font-family-mango);
   padding-top: 4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
