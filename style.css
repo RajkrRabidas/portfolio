@@ -301,10 +301,13 @@ body {
 }
 
 .intro-text {
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  max-width: 800px;
+  font-size: clamp(1.8rem, 2.8vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.03em;
+  margin: 0 auto;
+  
 }
 
 .highlight {
