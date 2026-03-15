@@ -1,0 +1,147 @@
+/* Projects section start here */
+
+.projects-section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.projects-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  overflow: hidden;
+}
+
+.projects-section h1 {
+  font-size: clamp(8rem, 9rem + 4vw, 12rem);
+  color: #aaa;
+  font-weight: lighter;
+  letter-spacing: -10px;
+  margin-bottom: 50px;
+  position: absolute;
+  bottom: -15%;
+  z-index: 1;
+  font-family: geist-mono;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card {
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  width: 325px;
+  height: auto;
+  background-color: #080808;
+  border-radius: 1em;
+  padding: 0.5em;
+  will-change: transform;
+  z-index: 2;
+  perspective: 100px;
+  transform-style: preserve-3d;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.3s ease-out;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 240px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: NeueHaasDisplay, Arial, Helvetica, sans-serif;
+  color: #fcfcfc;
+  padding: 0.5em;
+}
+
+.card-content h2 {
+  font-size: clamp(1rem, 1.933rem + 1.1852vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1;
+  padding-top: 1rem;
+}
+
+.card-description p {
+  padding-top: 1.6rem;
+  font-size: clamp(1rem, 0.933rem + 0.1852vw, 1.2rem);
+  color: #fcfcfc;
+  opacity: 0.4;
+  hyphens: manual;
+  line-height: initial;
+}
+
+.card-description {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  border-top: 1px solid #f3f3f3 mix(in srgb, #f0f0f0 20%, transparent);
+  padding-right: 1rem;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  margin-top: 0.6rem;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #fcfcfc;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  color: #fcfcfc;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.project-link i {
+  margin-right: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.card-description a {
+  position: relative;
+  height: 2rem;
+  background-color: #f3f3f3 mix(in srgb, #f0f0f0 20%, transparent);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
+  transition: all 0.2s ease-out;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* projects section end here */

@@ -1,0 +1,77 @@
+/* About section start here */
+
+.second-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  padding: 8rem 4rem 2rem 4rem;
+  color: #ddd;
+  position: relative;
+}
+
+.about-container {
+  max-width: 940px;
+  text-align: center;
+}
+
+.section-tag {
+  color: #aaa;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-family: var(--font-family-mango);
+  user-select: none;
+  text-align: left;
+  position: absolute;
+  left: 5%;
+  top: 6%;
+}
+
+.intro-text {
+  max-width: 800px;
+  font-size: clamp(1.8rem, 2.8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 auto;
+  font-family: "poppins", sans-serif;
+}
+
+.highlight {
+  color: #08645B;
+}
+
+.btn-container {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 18px 36px;
+  font-size: 1rem;
+  font-family: NeueHaasDisplay, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border: 1px solid #1F1F1F;
+  border-radius: 40px;
+  transition: 0.3s;
+  color: #928B8B;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #1F1F1F;
+  scale: 1.05;
+}
+
+/* About section end here */

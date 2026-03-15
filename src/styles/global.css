@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Red-Hat-Display";
+  src: url(/assets/red-hat-display_5.2.7_latin-300-normal.ttf);
+}
+
+@font-face {
+  font-family: "bold-mango";
+  src: url(/assets/7d084e7a659bd79d-s.p.ttf);
+}
+
+@font-face {
+  font-family: "light-mango";
+  src: url(/assets/gNMEW3NwSYq_9WD3yHQiFQ.woff2);
+}
+
+@font-face {
+  font-family: "geist-mono";
+  src: url(/assets/Geist-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Inter-Display";
+  src: url(/assets/dHHUz45rhM2KCQpj9zttNVlibk.woff2);
+}
+
+:root {
+  --senary-color: #4d4d66;
+  --text-color: #ffffff;
+  --background-color: #131313;
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "Red-Hat-Display", sans-serif;
+  --font-family-tertiary: "bold-mango", sans-serif;
+  --font-family-mango: "light-mango", sans-serif;
+  --font-family-mono: "geist-mono", monospace;
+  --mobile-horizontal-padding: 5%;
+  --default-horizontal-padding: 7.5%;
+  --minWidth2000-horizontal-padding: 15%;
+  --minWidth2500-horizontal-padding: 25%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body ::selection {
+  background: #F05038;
+  color: #fff;
+}
+
+#main {
+  position: relative;
+}
