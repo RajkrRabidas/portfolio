@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: end;
   padding: 1.7rem 3rem;
+  z-index: 100;
 }
 
 #header h2 {
@@ -19,6 +20,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav-close{
+  display: none;
 }
 
 #navbar ul {

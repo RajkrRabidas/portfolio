@@ -25,6 +25,14 @@ function Header() {
         </span>
       </button>
       <nav id="navbar" aria-expanded={isNavOpen}>
+        <button
+          className="nav-close"
+          type="button"
+          aria-label="Close navigation"
+          onClick={closeNav}
+        >
+          <i className="ri-close-line"></i>
+        </button>
         <ul>
           {navLinks.map((link) => (
             <li key={link.to}>
