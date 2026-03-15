@@ -5,6 +5,7 @@ import AboutSection from "./components/About/AboutSection";
 import ProjectsSection from "./components/Projects/ProjectsSection";
 import ServicesSection from "./components/Services/ServicesSection";
 import ContactSection from "./components/Contact/ContactSection";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 const App = memo(function App() {
@@ -19,6 +20,7 @@ const App = memo(function App() {
       <ProjectsSection />
       <ServicesSection />
       <ContactSection />
+      <SpeedInsights />
     </div>
   );
 });
